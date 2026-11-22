@@ -1,0 +1,47 @@
+# 放置在 ROBOTIS ai_worker/docker/docker-compose.wsl.yml 使用
+# 适配 Windows 11 WSL2 (WSLg 图形通道 + NVIDIA Container Toolkit GPU 透传)
+services:
+  ai_worker:
+    container_name: ai_worker
+    image: robotis/ai-worker:2.3.1
+    tty: true
+    restart: unless-stopped
+    cap_add:
+      - SYS_NICE
+    ulimits:
+      rtprio: 99
+      rttime: -1
+      memlock: 8428281856
+    network_mode: host
+    ipc: host
+    environment:
+      - DISPLAY=:0
+      - WAYLAND_DISPLAY=wayland-0
+      - XDG_RUNTIME_DIR=/mnt/wslg/runtime-dir
+      - PULSE_SERVER=unix:/mnt/wslg/PulseServer
+      - QT_X11_NO_MITSHM=1
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - NVIDIA_VISIBLE_DEVICES=all
+      # 若宿主机使用本地代理访问 OpenAI/GitHub，取消下方注释或通过宿主机环境变量传入
+      # - HTTP_PROXY=${HTTP_PROXY:-}
+      # - HTTPS_PROXY=${HTTPS_PROXY:-}
+      # - http_proxy=${http_proxy:-}
+      # - https_proxy=${https_proxy:-}
+      # - NO_PROXY=localhost,127.0.0.1,::1
+      # - no_proxy=localhost,127.0.0.1,::1
+    volumes:
+      - /dev:/dev
+      - /dev/shm:/dev/shm
+      - /mnt/wslg:/mnt/wslg
+      - /usr/lib/wsl:/usr/lib/wsl:ro
+      - ./workspace:/workspace
+      - ../:/root/ros2_ws/src/ai_worker/
+      - /var/run/robotis/agent_sockets/ai_worker:/var/run/agent
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    privileged: true

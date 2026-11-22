@@ -1,0 +1,8 @@
+# 将本文件复制到 Windows 用户目录 %USERPROFILE%\.wslconfig 后执行 wsl --shutdown 生效
+[wsl2]
+memory=16GB
+processors=16
+guiApplications=true
+networkingMode=mirrored
+dnsTunneling=true
+autoProxy=true

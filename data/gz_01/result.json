@@ -1,0 +1,31 @@
+{
+  "run_id": "gz_01",
+  "task": "pick up the blue block",
+  "model": "gpt-6-astra",
+  "effort": "low",
+  "end_reason": "token_limit",
+  "end_detail": 5024728,
+  "finish_reason": "halted:token_limit",
+  "claim": null,
+  "actions_executed": 27,
+  "observations": 55,
+  "robot_tool_calls": 57,
+  "rejections": {
+    "invalid_action": 1,
+    "observation_rejected": 1
+  },
+  "turns": 1,
+  "continuations": 0,
+  "elapsed_s": 1242.4,
+  "tokens": {
+    "total": 5024728,
+    "uncached_input": 98773,
+    "cached_input": 4917760,
+    "cache_write": 0,
+    "output": 8195,
+    "reasoning": 1068
+  },
+  "cost_usd_estimate": 6.315,
+  "verdict": null,
+  "verdict_note": null
+}

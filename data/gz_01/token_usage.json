@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-22T08:40:00.027317+00:00",
+  "thread_id": "01a20255-9ed2-79a2-9bec-75ea8fe625be",
+  "usage": {
+    "total": {
+      "totalTokens": 5024728,
+      "inputTokens": 5016533,
+      "cachedInputTokens": 4917760,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 8195,
+      "reasoningOutputTokens": 1068
+    },
+    "last": {
+      "totalTokens": 97631,
+      "inputTokens": 97352,
+      "cachedInputTokens": 96128,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 279,
+      "reasoningOutputTokens": 72
+    },
+    "modelContextWindow": 258400
+  }
+}

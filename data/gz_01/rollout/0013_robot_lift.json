@@ -1,0 +1,195 @@
+{
+  "at": "2026-11-22T08:22:47.436294+00:00",
+  "tool": "robot_lift",
+  "arguments": {
+    "request_id": "req_d2edc490f9794c88be79c688c94a5775",
+    "position_m": -0.15,
+    "reason": "Lift has reached about -.14 with both hands clear behind table. Hold near this height to stop torso drift before staging the reaching arm."
+  },
+  "result": {
+    "status": "arrived",
+    "reason": "lift reached its joint targets",
+    "command_sent": true,
+    "data": {
+      "target": {
+        "lift_joint": -0.15
+      },
+      "arrival": {
+        "arrived": true,
+        "stopped": false,
+        "joints": {
+          "lift_joint": {
+            "position": -0.14503432734285795,
+            "unit": "m",
+            "stamp_s": 43.379,
+            "age_s": 0.0068089339999914955
+          }
+        },
+        "errors": {
+          "lift_joint": 0.0049656726571420395
+        },
+        "elapsed_s": 3.881833024000116
+      },
+      "post_observation": {
+        "stamp_s": 43.396,
+        "frame": "base_link",
+        "arms": {
+          "right": {
+            "ee": {
+              "frame": "base_link",
+              "x": -0.013006216587333391,
+              "y": -0.29115262106203593,
+              "z": 0.5655813907376838,
+              "roll": -0.04806824232021394,
+              "pitch": -0.00020418458942682177,
+              "yaw": -0.05036145256012206,
+              "stamp_s": 43.396
+            },
+            "gripper": {
+              "joint": "gripper_r_joint1",
+              "value": 0.000501016357886349,
+              "position_rad": 0.000501016357886349,
+              "stamp_s": 43.4
+            }
+          },
+          "left": {
+            "ee": {
+              "frame": "base_link",
+              "x": -0.01126162734117181,
+              "y": 0.28466512938117167,
+              "z": 0.5261017237804945,
+              "roll": 0.05385464190691628,
+              "pitch": -0.0029841511989129547,
+              "yaw": 0.04327950524558145,
+              "stamp_s": 43.396
+            },
+            "gripper": {
+              "joint": "gripper_l_joint1",
+              "value": 0.009177436251339504,
+              "position_rad": 0.009177436251339504,
+              "stamp_s": 43.4
+            }
+          }
+        },
+        "clock": {
+          "sim_s": 43.448,
+          "received_age_s": 0.0003437880000092264,
+          "advanced_age_s": 0.0003437880000092264,
+          "rewinds": 0
+        },
+        "body": {
+          "head_joint1": {
+            "position": 0.6949999987946228,
+            "unit": "rad",
+            "stamp_s": 43.4
+          },
+          "head_joint2": {
+            "position": -1.795823798760269e-12,
+            "unit": "rad",
+            "stamp_s": 43.4
+          },
+          "lift_joint": {
+            "position": -0.14504345761062404,
+            "unit": "m",
+            "stamp_s": 43.4
+          }
+        },
+        "base": {
+          "frame": "odom",
+          "child_frame": "base_link",
+          "x": -1.2694208914785823e-11,
+          "y": -2.4332923229214444e-14,
+          "yaw": -4.666489417104458e-12,
+          "vx": 4.590291799089389e-17,
+          "vy": 1.8888107810118923e-20,
+          "wz": 3.6091939174866915e-18,
+          "stamp_s": 43.4
+        },
+        "max_offset_s": 0.003999999999997783,
+        "cameras": {
+          "head": {
+            "camera": "head",
+            "topic": "/head_camera/image",
+            "frame_id": "zed_left_camera_optical_frame",
+            "stamp_s": 43.396,
+            "receive_age_s": 0.06510167500005082,
+            "width": 672,
+            "height": 376,
+            "encoding": "rgb8"
+          },
+          "wrist_left": {
+            "camera": "wrist_left",
+            "topic": "/wrist_left_camera/image",
+            "frame_id": "camera_left_color_optical_frame",
+            "stamp_s": 43.396,
+            "receive_age_s": 0.2636822489998849,
+            "width": 424,
+            "height": 240,
+            "encoding": "rgb8"
+          },
+          "wrist_right": {
+            "camera": "wrist_right",
+            "topic": "/wrist_right_camera/image",
+            "frame_id": "camera_right_color_optical_frame",
+            "stamp_s": 43.396,
+            "receive_age_s": 0.114508547000014,
+            "width": 424,
+            "height": 240,
+            "encoding": "rgb8"
+          }
+        },
+        "action_context": {
+          "movement_allowed": true,
+          "observation_id": "obs_33cac47eca164cb1b58403f3e254f016",
+          "request_id": "req_4a6dca64f3d54aa58d1a2e96508ce554",
+          "max_age_s": 60.0,
+          "run_halted": false
+        }
+      },
+      "post_observation_error": null,
+      "action_context": {
+        "movement_allowed": true,
+        "observation_id": "obs_33cac47eca164cb1b58403f3e254f016",
+        "request_id": "req_4a6dca64f3d54aa58d1a2e96508ce554",
+        "max_age_s": 60.0,
+        "run_halted": false
+      },
+      "accepted_request": {
+        "observation_id": "obs_5ea348bf48f74f48b0d46aa922c54c1d",
+        "request_id": "req_d2edc490f9794c88be79c688c94a5775"
+      }
+    },
+    "images": [
+      {
+        "camera": "head",
+        "topic": "/head_camera/image",
+        "frame_id": "zed_left_camera_optical_frame",
+        "stamp_s": 43.396,
+        "receive_age_s": 0.06510167500005082,
+        "width": 672,
+        "height": 376,
+        "encoding": "rgb8"
+      },
+      {
+        "camera": "wrist_left",
+        "topic": "/wrist_left_camera/image",
+        "frame_id": "camera_left_color_optical_frame",
+        "stamp_s": 43.396,
+        "receive_age_s": 0.2636822489998849,
+        "width": 424,
+        "height": 240,
+        "encoding": "rgb8"
+      },
+      {
+        "camera": "wrist_right",
+        "topic": "/wrist_right_camera/image",
+        "frame_id": "camera_right_color_optical_frame",
+        "stamp_s": 43.396,
+        "receive_age_s": 0.114508547000014,
+        "width": 424,
+        "height": 240,
+        "encoding": "rgb8"
+      }
+    ]
+  }
+}

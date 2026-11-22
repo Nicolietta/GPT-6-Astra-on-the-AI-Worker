@@ -1,0 +1,53 @@
+{
+  "run_id": "gz_01",
+  "task": "pick up the blue block",
+  "model": "gpt-6-astra",
+  "effort": "low",
+  "elapsed_s_result": 1242.4,
+  "wall_span_calls_s": 1296.32,
+  "sim_span_s": 106.46,
+  "avg_rtf": 0.0821,
+  "total_calls": 57,
+  "actions_executed": 27,
+  "observations": 55,
+  "rejections": {
+    "invalid_action": 1,
+    "observation_rejected": 1
+  },
+  "sleep_count": 26,
+  "total_sleep_s": 734.52,
+  "sleep_pct": 56.7,
+  "total_llm_s": 429.32,
+  "llm_pct": 33.1,
+  "llm_mean_s": 7.67,
+  "llm_median_s": 6.5,
+  "total_tool_s": 132.48,
+  "tool_pct": 10.2,
+  "sync_mean_ms": 2.4,
+  "sync_max_ms": 5.0,
+  "tokens": {
+    "total": 5024728,
+    "uncached_input": 98773,
+    "cached_input": 4917760,
+    "cache_write": 0,
+    "output": 8195,
+    "reasoning": 1068
+  },
+  "cache_hit_pct": 98.03,
+  "cost_usd_estimate": 6.315,
+  "tool_counts": {
+    "robot_start": 1,
+    "robot_head": 1,
+    "robot_observe": 27,
+    "robot_lift": 2,
+    "robot_move": 25,
+    "robot_base": 1
+  },
+  "status_counts": {
+    "observed": 28,
+    "stopped": 26,
+    "rejected": 2,
+    "arrived": 1
+  },
+  "ideal_1x_rtf_est_s": 330.6
+}

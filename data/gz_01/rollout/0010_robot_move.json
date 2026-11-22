@@ -1,0 +1,56 @@
+{
+  "at": "2026-11-22T08:21:38.534112+00:00",
+  "tool": "robot_move",
+  "arguments": {
+    "request_id": "req_e45811c1dba14da2b29e0021026f5e83",
+    "arm": "right",
+    "x": 0.005,
+    "y": -0.28,
+    "z": 0.631,
+    "roll": -0.0931,
+    "pitch": -0.0018,
+    "yaw": -0.0478,
+    "reason": "Hand remains in clear space beside body; measured wrist about .54 m below shoulder and moving upward, indicating tracking lag rather than obstacle. Continue upward and slightly forward toward a tabletop-height staging pose."
+  },
+  "result": {
+    "status": "rejected",
+    "reason": "step 0.052 m exceeds 0.05 m",
+    "command_sent": false,
+    "data": {
+      "requested": {
+        "arm": "right",
+        "x": 0.005,
+        "y": -0.28,
+        "z": 0.631,
+        "roll": -0.0931,
+        "pitch": -0.0018,
+        "yaw": -0.0478
+      },
+      "current_pose": {
+        "frame": "base_link",
+        "x": -0.013471895757448782,
+        "y": -0.28522839352149404,
+        "z": 0.5823949929820466,
+        "quat": [
+          -0.03691020489596941,
+          -0.0003001179754447691,
+          -0.025637418743978728,
+          0.998989624302417
+        ],
+        "stamp_s": 37.58
+      },
+      "action_context": {
+        "movement_allowed": true,
+        "observation_id": "obs_4615aefeb34940afbe8de6c02bd87799",
+        "request_id": "req_414381825ad64efaa42137eb619ef4d3",
+        "max_age_s": 60.0,
+        "run_halted": false
+      },
+      "accepted_request": {
+        "observation_id": "obs_4615aefeb34940afbe8de6c02bd87799",
+        "request_id": "req_e45811c1dba14da2b29e0021026f5e83"
+      }
+    },
+    "images": []
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-22T08:21:43.912217+00:00",
+  "tool": "robot_move",
+  "arguments": {
+    "request_id": "req_414381825ad64efaa42137eb619ef4d3",
+    "arm": "right",
+    "x": 0.005,
+    "y": -0.28,
+    "z": 0.622,
+    "roll": -0.0931,
+    "pitch": -0.0018,
+    "yaw": -0.0478,
+    "reason": "Corrected shorter upward step accounting for torso-induced hand drift; hand and camera remain behind table in open space."
+  },
+  "result": {
+    "status": "rejected",
+    "reason": "Pre-action check failed: lift_joint position changed. Call observe.",
+    "command_sent": false,
+    "data": {
+      "code": "observation_rejected",
+      "requires_observe": true,
+      "run_halted": false
+    },
+    "images": []
+  }
+}

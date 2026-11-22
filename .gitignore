@@ -1,0 +1,23 @@
+# Python / venv
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Credentials / Auth / Secrets (NEVER commit)
+auth.json
+*.key
+*.pem
+.env
+codex_session.jsonl
+rpc_in.jsonl
+rpc_out.jsonl
+
+# Intermediate rendering frames
+video_frames/
+*.ttc

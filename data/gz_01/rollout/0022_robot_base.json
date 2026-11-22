@@ -1,0 +1,209 @@
+{
+  "at": "2026-11-22T08:25:56.473384+00:00",
+  "tool": "robot_base",
+  "arguments": {
+    "request_id": "req_0c4a19a65c0c4b29b376d27abf047d74",
+    "vx": 0.1,
+    "vy": 0,
+    "wz": 0,
+    "duration_s": 1.5,
+    "reason": "Head shows table ahead with substantial separation; both wrist views show the table edge ahead of hands and clear intervening space. Hands are near body. Move a short distance forward to shorten reach without entering under table."
+  },
+  "result": {
+    "status": "stopped",
+    "reason": "base made no progress while moving and stopped (0.000 m, 0.000 rad in 0.5 s)",
+    "command_sent": true,
+    "data": {
+      "target": {
+        "vx": 0.1,
+        "vy": 0.0,
+        "wz": 0.0,
+        "duration_s": 1.5
+      },
+      "motion": {
+        "commanded": {
+          "vx": 0.1,
+          "vy": 0.0,
+          "wz": 0.0
+        },
+        "duration_s": 1.5,
+        "outcome": "stalled",
+        "detail": "0.000 m, 0.000 rad in 0.5 s",
+        "elapsed_s": 1.0407414909998352,
+        "path_m": 7.353972078793222e-17,
+        "path_rad": 0.0,
+        "rest_confirmed": true,
+        "odom_measured": {
+          "frame": "start base_link",
+          "dx": -2.9595858118580313e-16,
+          "dy": -2.2023690515841394e-19,
+          "dyaw": 0.0
+        }
+      },
+      "arrival": {
+        "arrived": false,
+        "stopped": true
+      },
+      "post_observation": {
+        "stamp_s": 59.434,
+        "frame": "base_link",
+        "arms": {
+          "right": {
+            "ee": {
+              "frame": "base_link",
+              "x": 0.06456585385248309,
+              "y": -0.29008160990233445,
+              "z": 0.6901603305853592,
+              "roll": -0.09295377891595852,
+              "pitch": -0.0017813177979002358,
+              "yaw": -0.048176541327545,
+              "stamp_s": 59.434
+            },
+            "gripper": {
+              "joint": "gripper_r_joint1",
+              "value": 0.0005010218032910202,
+              "position_rad": 0.0005010218032910202,
+              "stamp_s": 59.43
+            }
+          },
+          "left": {
+            "ee": {
+              "frame": "base_link",
+              "x": -0.010874554182064566,
+              "y": 0.2887712258361143,
+              "z": 0.5231296775365825,
+              "roll": 0.03280523003556388,
+              "pitch": -0.00023086888473253356,
+              "yaw": 0.04237399356730613,
+              "stamp_s": 59.434
+            },
+            "gripper": {
+              "joint": "gripper_l_joint1",
+              "value": 0.009177441316677406,
+              "position_rad": 0.009177441316677406,
+              "stamp_s": 59.43
+            }
+          }
+        },
+        "clock": {
+          "sim_s": 59.484,
+          "received_age_s": 0.0002991789999668981,
+          "advanced_age_s": 0.0002991789999668981,
+          "rewinds": 0
+        },
+        "body": {
+          "head_joint1": {
+            "position": 0.6950000001121324,
+            "unit": "rad",
+            "stamp_s": 59.43
+          },
+          "head_joint2": {
+            "position": -1.7958210413116003e-12,
+            "unit": "rad",
+            "stamp_s": 59.43
+          },
+          "lift_joint": {
+            "position": -0.15006945074473332,
+            "unit": "m",
+            "stamp_s": 59.43
+          }
+        },
+        "base": {
+          "frame": "odom",
+          "child_frame": "base_link",
+          "x": -1.3148515047517505e-11,
+          "y": -2.8365238975238996e-14,
+          "yaw": -5.438760553033717e-12,
+          "vx": -2.2741221204278596e-15,
+          "vy": 4.572912936708127e-18,
+          "wz": 8.738049688507154e-16,
+          "stamp_s": 59.43
+        },
+        "max_offset_s": 0.003999999999997783,
+        "cameras": {
+          "head": {
+            "camera": "head",
+            "topic": "/head_camera/image",
+            "frame_id": "zed_left_camera_optical_frame",
+            "stamp_s": 59.434,
+            "receive_age_s": 0.012033231000032174,
+            "width": 672,
+            "height": 376,
+            "encoding": "rgb8"
+          },
+          "wrist_left": {
+            "camera": "wrist_left",
+            "topic": "/wrist_left_camera/image",
+            "frame_id": "camera_left_color_optical_frame",
+            "stamp_s": 59.434,
+            "receive_age_s": 0.20762652600001275,
+            "width": 424,
+            "height": 240,
+            "encoding": "rgb8"
+          },
+          "wrist_right": {
+            "camera": "wrist_right",
+            "topic": "/wrist_right_camera/image",
+            "frame_id": "camera_right_color_optical_frame",
+            "stamp_s": 59.434,
+            "receive_age_s": 0.05990330899999208,
+            "width": 424,
+            "height": 240,
+            "encoding": "rgb8"
+          }
+        },
+        "action_context": {
+          "movement_allowed": true,
+          "observation_id": "obs_29d7742c346d45ac87d5c1e7a6abd4ef",
+          "request_id": "req_cbede305477347c3b2b22ab062ed2bcc",
+          "max_age_s": 60.0,
+          "run_halted": false
+        }
+      },
+      "post_observation_error": null,
+      "action_context": {
+        "movement_allowed": true,
+        "observation_id": "obs_29d7742c346d45ac87d5c1e7a6abd4ef",
+        "request_id": "req_cbede305477347c3b2b22ab062ed2bcc",
+        "max_age_s": 60.0,
+        "run_halted": false
+      },
+      "accepted_request": {
+        "observation_id": "obs_d14380fbd47845b29e6f80f7d0309dbf",
+        "request_id": "req_0c4a19a65c0c4b29b376d27abf047d74"
+      }
+    },
+    "images": [
+      {
+        "camera": "head",
+        "topic": "/head_camera/image",
+        "frame_id": "zed_left_camera_optical_frame",
+        "stamp_s": 59.434,
+        "receive_age_s": 0.012033231000032174,
+        "width": 672,
+        "height": 376,
+        "encoding": "rgb8"
+      },
+      {
+        "camera": "wrist_left",
+        "topic": "/wrist_left_camera/image",
+        "frame_id": "camera_left_color_optical_frame",
+        "stamp_s": 59.434,
+        "receive_age_s": 0.20762652600001275,
+        "width": 424,
+        "height": 240,
+        "encoding": "rgb8"
+      },
+      {
+        "camera": "wrist_right",
+        "topic": "/wrist_right_camera/image",
+        "frame_id": "camera_right_color_optical_frame",
+        "stamp_s": 59.434,
+        "receive_age_s": 0.05990330899999208,
+        "width": 424,
+        "height": 240,
+        "encoding": "rgb8"
+      }
+    ]
+  }
+}
