@@ -1,0 +1,195 @@
+{
+  "at": "2026-11-22T14:43:19.520951+00:00",
+  "tool": "robot_lift",
+  "arguments": {
+    "request_id": "req_d7d35e8571a64618b3579931111afa8d",
+    "position_m": -0.35,
+    "reason": "Blue cube is on open tabletop ahead and right; hands hang clear beside body. Lower torso to bring shoulder near tabletop working height before reaching."
+  },
+  "result": {
+    "status": "arrived",
+    "reason": "lift reached its joint targets",
+    "command_sent": true,
+    "data": {
+      "target": {
+        "lift_joint": -0.35
+      },
+      "arrival": {
+        "arrived": true,
+        "stopped": false,
+        "joints": {
+          "lift_joint": {
+            "position": -0.3467769030236683,
+            "unit": "m",
+            "stamp_s": 100.38,
+            "age_s": 0.005149576998519478
+          }
+        },
+        "errors": {
+          "lift_joint": 0.003223096976331663
+        },
+        "elapsed_s": 38.06067428000097
+      },
+      "post_observation": {
+        "stamp_s": 100.387,
+        "frame": "base_link",
+        "arms": {
+          "right": {
+            "ee": {
+              "frame": "base_link",
+              "x": -0.019814894397750776,
+              "y": -0.25198076400764624,
+              "z": 0.5683325093158792,
+              "roll": 0.033833006782922,
+              "pitch": -0.0014898936333111242,
+              "yaw": -0.0020729241501150184,
+              "stamp_s": 100.387
+            },
+            "gripper": {
+              "joint": "gripper_r_joint1",
+              "value": 0.00013473125256462302,
+              "position_rad": 0.00013473125256462302,
+              "stamp_s": 100.39
+            }
+          },
+          "left": {
+            "ee": {
+              "frame": "base_link",
+              "x": -0.019814910628941917,
+              "y": 0.2519811781561958,
+              "z": 0.568332506808678,
+              "roll": -0.033829059206817405,
+              "pitch": -0.001490606549740426,
+              "yaw": 0.002072474683751151,
+              "stamp_s": 100.387
+            },
+            "gripper": {
+              "joint": "gripper_l_joint1",
+              "value": 0.005226854063821093,
+              "position_rad": 0.005226854063821093,
+              "stamp_s": 100.39
+            }
+          }
+        },
+        "clock": {
+          "sim_s": 100.436,
+          "received_age_s": 0.0022004550010024104,
+          "advanced_age_s": 0.0022004550010024104,
+          "rewinds": 0
+        },
+        "body": {
+          "head_joint1": {
+            "position": 0.6950000001121925,
+            "unit": "rad",
+            "stamp_s": 100.39
+          },
+          "head_joint2": {
+            "position": -1.795864715669615e-12,
+            "unit": "rad",
+            "stamp_s": 100.39
+          },
+          "lift_joint": {
+            "position": -0.34680913399365093,
+            "unit": "m",
+            "stamp_s": 100.39
+          }
+        },
+        "base": {
+          "frame": "odom",
+          "child_frame": "base_link",
+          "x": -4.060952703425345e-11,
+          "y": 2.3241356040575716e-13,
+          "yaw": 4.441380596631461e-11,
+          "vx": -1.234179957690277e-16,
+          "vy": -5.432895809243755e-20,
+          "wz": -1.0381339301810237e-17,
+          "stamp_s": 100.39
+        },
+        "max_offset_s": 0.0030000000000001137,
+        "cameras": {
+          "head": {
+            "camera": "head",
+            "topic": "/head_camera/image",
+            "frame_id": "zed_left_camera_optical_frame",
+            "stamp_s": 100.387,
+            "receive_age_s": 0.03383576599662774,
+            "width": 672,
+            "height": 376,
+            "encoding": "rgb8"
+          },
+          "wrist_left": {
+            "camera": "wrist_left",
+            "topic": "/wrist_left_camera/image",
+            "frame_id": "camera_left_color_optical_frame",
+            "stamp_s": 100.387,
+            "receive_age_s": 0.04906055699757417,
+            "width": 424,
+            "height": 240,
+            "encoding": "rgb8"
+          },
+          "wrist_right": {
+            "camera": "wrist_right",
+            "topic": "/wrist_right_camera/image",
+            "frame_id": "camera_right_color_optical_frame",
+            "stamp_s": 100.387,
+            "receive_age_s": 0.04225121799754561,
+            "width": 424,
+            "height": 240,
+            "encoding": "rgb8"
+          }
+        },
+        "action_context": {
+          "movement_allowed": true,
+          "observation_id": "obs_a687c73d00224c909d5546a6fb27388e",
+          "request_id": "req_96a3ee70ffa04612880c3bee73f905d0",
+          "max_age_s": 60.0,
+          "run_halted": false
+        }
+      },
+      "post_observation_error": null,
+      "action_context": {
+        "movement_allowed": true,
+        "observation_id": "obs_a687c73d00224c909d5546a6fb27388e",
+        "request_id": "req_96a3ee70ffa04612880c3bee73f905d0",
+        "max_age_s": 60.0,
+        "run_halted": false
+      },
+      "accepted_request": {
+        "observation_id": "obs_d283548ba4734d0090d0f8dac9d9416e",
+        "request_id": "req_d7d35e8571a64618b3579931111afa8d"
+      }
+    },
+    "images": [
+      {
+        "camera": "head",
+        "topic": "/head_camera/image",
+        "frame_id": "zed_left_camera_optical_frame",
+        "stamp_s": 100.387,
+        "receive_age_s": 0.03383576599662774,
+        "width": 672,
+        "height": 376,
+        "encoding": "rgb8"
+      },
+      {
+        "camera": "wrist_left",
+        "topic": "/wrist_left_camera/image",
+        "frame_id": "camera_left_color_optical_frame",
+        "stamp_s": 100.387,
+        "receive_age_s": 0.04906055699757417,
+        "width": 424,
+        "height": 240,
+        "encoding": "rgb8"
+      },
+      {
+        "camera": "wrist_right",
+        "topic": "/wrist_right_camera/image",
+        "frame_id": "camera_right_color_optical_frame",
+        "stamp_s": 100.387,
+        "receive_age_s": 0.04225121799754561,
+        "width": 424,
+        "height": 240,
+        "encoding": "rgb8"
+      }
+    ]
+  }
+}

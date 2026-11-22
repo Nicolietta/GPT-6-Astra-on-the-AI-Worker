@@ -1,0 +1,247 @@
+{
+  "at": "2026-11-22T14:44:21.573093+00:00",
+  "tool": "robot_execute_plan",
+  "arguments": {
+    "request_id": "req_85d7d4da8d74482a8e9ab54330bd2511",
+    "reason": "Forward posture change succeeded; continue upward before reaching over tabletop.",
+    "steps": [
+      {
+        "tool": "robot_move",
+        "args": {
+          "arm": "right",
+          "x": 0.025,
+          "y": -0.264,
+          "z": 0.745,
+          "roll": 0.0331,
+          "pitch": -0.0014,
+          "yaw": -0.0021
+        },
+        "reason": "Raise unfolded hand above table in clear near-body space."
+      },
+      {
+        "tool": "robot_move",
+        "args": {
+          "arm": "right",
+          "x": 0.025,
+          "y": -0.264,
+          "z": 0.79,
+          "roll": 0.0331,
+          "pitch": -0.0014,
+          "yaw": -0.0021
+        },
+        "reason": "Raise unfolded hand above table in clear near-body space."
+      },
+      {
+        "tool": "robot_move",
+        "args": {
+          "arm": "right",
+          "x": 0.025,
+          "y": -0.264,
+          "z": 0.835,
+          "roll": 0.0331,
+          "pitch": -0.0014,
+          "yaw": -0.0021
+        },
+        "reason": "Raise unfolded hand above table in clear near-body space."
+      },
+      {
+        "tool": "robot_move",
+        "args": {
+          "arm": "right",
+          "x": 0.025,
+          "y": -0.264,
+          "z": 0.88,
+          "roll": 0.0331,
+          "pitch": -0.0014,
+          "yaw": -0.0021
+        },
+        "reason": "Raise unfolded hand above table in clear near-body space."
+      }
+    ]
+  },
+  "result": {
+    "status": "plan_interrupted",
+    "reason": "stopped",
+    "command_sent": true,
+    "data": {
+      "plan_id": "plan_0008",
+      "source_observation_id": "obs_34c0bfc9d08a408d8c9333f350edff37",
+      "source_request_id": "req_85d7d4da8d74482a8e9ab54330bd2511",
+      "steps": [
+        {
+          "step_index": 1,
+          "tool": "robot_move",
+          "args": {
+            "arm": "right",
+            "x": 0.025,
+            "y": -0.264,
+            "z": 0.745,
+            "roll": 0.0331,
+            "pitch": -0.0014,
+            "yaw": -0.0021
+          },
+          "reason": "Raise unfolded hand above table in clear near-body space.",
+          "packet": {
+            "action_executed": true,
+            "tool": "robot_move",
+            "status": "stopped",
+            "rejection": null,
+            "reason": "move stopped before its target",
+            "result": {
+              "arrival": {
+                "arrived": false,
+                "stopped": true,
+                "position_error_m": 0.0344,
+                "orientation_error_deg": 2.11
+              },
+              "target": {
+                "arm": "right",
+                "x": 0.025,
+                "y": -0.264,
+                "z": 0.745,
+                "roll": 0.0331,
+                "pitch": -0.0014,
+                "yaw": -0.0021,
+                "z_from_arm_base": -0.3365999999722148,
+                "step_m": 0.045063920005697214,
+                "rotation_deg": 0.8163478233927113
+              }
+            },
+            "observation": {
+              "observation_number": 9,
+              "observation_id": "obs_a6ffa7f4385441ecb37f20af3845f6c0",
+              "stamp_s": 154.704,
+              "frame": "base_link",
+              "arms": {
+                "right": {
+                  "xyz": [
+                    0.0364,
+                    -0.2759,
+                    0.7147
+                  ],
+                  "rpy": [
+                    0.0599,
+                    0.024,
+                    -0.0007
+                  ],
+                  "gripper": 0.0,
+                  "gripper_rad": 0.0001
+                },
+                "left": {
+                  "xyz": [
+                    -0.0204,
+                    0.2518,
+                    0.5768
+                  ],
+                  "rpy": [
+                    -0.0342,
+                    -0.0017,
+                    0.0023
+                  ],
+                  "gripper": 0.005,
+                  "gripper_rad": 0.0052
+                }
+              },
+              "body": {
+                "head_joint1": 0.695,
+                "head_joint2": -0.0,
+                "lift_joint": -0.35
+              },
+              "base": {
+                "frame": "odom",
+                "xy": [
+                  -0.0,
+                  0.0
+                ],
+                "yaw": 0.0
+              },
+              "images": [
+                {
+                  "camera": "head",
+                  "path": "/root/ros2_ws/src/ai_worker/ffw_codex/runs/gz_02/public/observations/009/head.jpg",
+                  "width": 672,
+                  "height": 376
+                },
+                {
+                  "camera": "wrist_left",
+                  "path": "/root/ros2_ws/src/ai_worker/ffw_codex/runs/gz_02/public/observations/009/wrist_left.jpg",
+                  "width": 424,
+                  "height": 240
+                },
+                {
+                  "camera": "wrist_right",
+                  "path": "/root/ros2_ws/src/ai_worker/ffw_codex/runs/gz_02/public/observations/009/wrist_right.jpg",
+                  "width": 424,
+                  "height": 240
+                }
+              ],
+              "path": "/root/ros2_ws/src/ai_worker/ffw_codex/runs/gz_02/public/observations/009/observation.json"
+            },
+            "observation_note": null,
+            "action_context": {
+              "movement_allowed": true,
+              "request_id": "req_299ddeb685e24c26bbfbbae200efd9f9",
+              "max_age_s": 60.0
+            },
+            "progress": {
+              "call_index": 8,
+              "actions_executed": 8,
+              "actions_remaining": 72,
+              "seconds_remaining": 1678,
+              "rollout_finished": false
+            },
+            "next_call": {
+              "tool": "robot_move | robot_gripper | robot_head | robot_lift | robot_base | robot_execute_plan",
+              "request_id": "req_299ddeb685e24c26bbfbbae200efd9f9"
+            },
+            "history_path": "/root/ros2_ws/src/ai_worker/ffw_codex/runs/gz_02/public/history.jsonl"
+          }
+        }
+      ],
+      "remaining_steps": [
+        {
+          "tool": "robot_move",
+          "args": {
+            "arm": "right",
+            "x": 0.025,
+            "y": -0.264,
+            "z": 0.79,
+            "roll": 0.0331,
+            "pitch": -0.0014,
+            "yaw": -0.0021
+          },
+          "reason": "Raise unfolded hand above table in clear near-body space."
+        },
+        {
+          "tool": "robot_move",
+          "args": {
+            "arm": "right",
+            "x": 0.025,
+            "y": -0.264,
+            "z": 0.835,
+            "roll": 0.0331,
+            "pitch": -0.0014,
+            "yaw": -0.0021
+          },
+          "reason": "Raise unfolded hand above table in clear near-body space."
+        },
+        {
+          "tool": "robot_move",
+          "args": {
+            "arm": "right",
+            "x": 0.025,
+            "y": -0.264,
+            "z": 0.88,
+            "roll": 0.0331,
+            "pitch": -0.0014,
+            "yaw": -0.0021
+          },
+          "reason": "Raise unfolded hand above table in clear near-body space."
+        }
+      ],
+      "running_step": null,
+      "stop_reason": "stopped"
+    },
+    "images": []
+  }
+}

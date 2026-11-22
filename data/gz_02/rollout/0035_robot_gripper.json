@@ -1,0 +1,194 @@
+{
+  "at": "2026-11-22T14:51:33.606246+00:00",
+  "tool": "robot_gripper",
+  "arguments": {
+    "request_id": "req_37972edea33545ca909c379d7498818e",
+    "arm": "right",
+    "value": 0.7,
+    "reason": "Partial close left cube stationary and centered. Wrist now clearly shows pads above and below cube image, adjacent to opposite sides; head confirms pads span body height. Increase closure to secure body."
+  },
+  "result": {
+    "status": "stopped",
+    "reason": "gripper stopped before its target",
+    "command_sent": true,
+    "data": {
+      "target": {
+        "arm": "right",
+        "value": 0.7
+      },
+      "target_rad": 0.7,
+      "arrival": {
+        "arrived": false,
+        "stopped": true,
+        "gripper": {
+          "joint": "gripper_r_joint1",
+          "position_rad": 0.6760377801061933,
+          "stamp_s": 528.22,
+          "age_s": 0.0069729330025438685
+        },
+        "error_rad": 0.023962219893806647,
+        "elapsed_s": 3.667833450999751
+      },
+      "post_observation": {
+        "stamp_s": 528.231,
+        "frame": "base_link",
+        "arms": {
+          "right": {
+            "ee": {
+              "frame": "base_link",
+              "x": 0.5355153368473361,
+              "y": 0.009646922888857684,
+              "z": 0.8522832604856999,
+              "roll": 0.03430285478800862,
+              "pitch": -0.2034695253049135,
+              "yaw": -0.0025576391649730842,
+              "stamp_s": 528.231
+            },
+            "gripper": {
+              "joint": "gripper_r_joint1",
+              "value": 0.6761224708008504,
+              "position_rad": 0.6761224708008504,
+              "stamp_s": 528.23
+            }
+          },
+          "left": {
+            "ee": {
+              "frame": "base_link",
+              "x": -0.019952423268740888,
+              "y": 0.25240995900247576,
+              "z": 0.5762660928831258,
+              "roll": -0.027086415023094706,
+              "pitch": -0.0008478597838434295,
+              "yaw": -0.00021597941124365164,
+              "stamp_s": 528.231
+            },
+            "gripper": {
+              "joint": "gripper_l_joint1",
+              "value": 0.005303793925013109,
+              "position_rad": 0.005303793925013109,
+              "stamp_s": 528.23
+            }
+          }
+        },
+        "clock": {
+          "sim_s": 528.257,
+          "received_age_s": 0.0003360760019859299,
+          "advanced_age_s": 0.0003360760019859299,
+          "rewinds": 0
+        },
+        "body": {
+          "head_joint1": {
+            "position": 0.695000264228521,
+            "unit": "rad",
+            "stamp_s": 528.23
+          },
+          "head_joint2": {
+            "position": -6.94114479221781e-08,
+            "unit": "rad",
+            "stamp_s": 528.23
+          },
+          "lift_joint": {
+            "position": -0.345988286755577,
+            "unit": "m",
+            "stamp_s": 528.23
+          }
+        },
+        "base": {
+          "frame": "odom",
+          "child_frame": "base_link",
+          "x": 2.2358871650166046e-07,
+          "y": -3.656617237722784e-09,
+          "yaw": -6.985003100368203e-07,
+          "vx": -4.9179849660277183e-11,
+          "vy": -1.1824087526394765e-16,
+          "wz": 3.4534058224289485e-16,
+          "stamp_s": 528.23
+        },
+        "max_offset_s": 0.0009999999999763531,
+        "cameras": {
+          "head": {
+            "camera": "head",
+            "topic": "/head_camera/image",
+            "frame_id": "zed_left_camera_optical_frame",
+            "stamp_s": 528.231,
+            "receive_age_s": 0.019130459000734845,
+            "width": 672,
+            "height": 376,
+            "encoding": "rgb8"
+          },
+          "wrist_left": {
+            "camera": "wrist_left",
+            "topic": "/wrist_left_camera/image",
+            "frame_id": "camera_left_color_optical_frame",
+            "stamp_s": 528.231,
+            "receive_age_s": 0.03569823900033953,
+            "width": 424,
+            "height": 240,
+            "encoding": "rgb8"
+          },
+          "wrist_right": {
+            "camera": "wrist_right",
+            "topic": "/wrist_right_camera/image",
+            "frame_id": "camera_right_color_optical_frame",
+            "stamp_s": 528.231,
+            "receive_age_s": 0.028727781998895807,
+            "width": 424,
+            "height": 240,
+            "encoding": "rgb8"
+          }
+        },
+        "action_context": {
+          "movement_allowed": true,
+          "observation_id": "obs_9cdf8b8e6f0b45f2828cd9b3ce910159",
+          "request_id": "req_6fc3e32f6fed497cbd23405bb5bf1e54",
+          "max_age_s": 60.0,
+          "run_halted": false
+        }
+      },
+      "post_observation_error": null,
+      "action_context": {
+        "movement_allowed": true,
+        "observation_id": "obs_9cdf8b8e6f0b45f2828cd9b3ce910159",
+        "request_id": "req_6fc3e32f6fed497cbd23405bb5bf1e54",
+        "max_age_s": 60.0,
+        "run_halted": false
+      },
+      "accepted_request": {
+        "observation_id": "obs_0816f5f3593b415193a8c413120b79f4",
+        "request_id": "req_37972edea33545ca909c379d7498818e"
+      }
+    },
+    "images": [
+      {
+        "camera": "head",
+        "topic": "/head_camera/image",
+        "frame_id": "zed_left_camera_optical_frame",
+        "stamp_s": 528.231,
+        "receive_age_s": 0.019130459000734845,
+        "width": 672,
+        "height": 376,
+        "encoding": "rgb8"
+      },
+      {
+        "camera": "wrist_left",
+        "topic": "/wrist_left_camera/image",
+        "frame_id": "camera_left_color_optical_frame",
+        "stamp_s": 528.231,
+        "receive_age_s": 0.03569823900033953,
+        "width": 424,
+        "height": 240,
+        "encoding": "rgb8"
+      },
+      {
+        "camera": "wrist_right",
+        "topic": "/wrist_right_camera/image",
+        "frame_id": "camera_right_color_optical_frame",
+        "stamp_s": 528.231,
+        "receive_age_s": 0.028727781998895807,
+        "width": 424,
+        "height": 240,
+        "encoding": "rgb8"
+      }
+    ]
+  }
+}

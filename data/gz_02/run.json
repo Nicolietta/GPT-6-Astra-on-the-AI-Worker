@@ -1,0 +1,28 @@
+{
+  "run_id": "gz_02",
+  "created_at": "2026-11-22T14:42:11.507504+00:00",
+  "task": "pick up the blue block",
+  "model": "gpt-6-astra",
+  "effort": "low",
+  "episode": {
+    "max_actions": 80,
+    "max_seconds": 1800,
+    "max_total_tokens": 5000000
+  },
+  "config_path": "/root/ros2_ws/src/ai_worker/ffw_codex/config_gazebo.yaml",
+  "config_sha256": "44b3ef8ac04dd184d2d868fc1a10e4891aad9c90228b1149d3e89e4190954bd9",
+  "agent_files_sha256": {
+    "AGENTS.md": "ef368da899af0a5ad367fc850d9b0f2427f97418e7a44221cae670bbf8aa7dc3",
+    "context/robot_contract.md": "d4972bc4679a56b0d33ccc3393ed9692a1f4a1a2995ea61c496ad35093e7e178",
+    "context/task_context.md": "9cc784f1400e670e42ce47171542077001d3e6e6de22643d5c5d295c9b74662e",
+    "notes/NOTES.md": "48ebe6afdfbe1332ecb915f4ef2edef3cafafbda4d28bc5407817118f4606199",
+    "workspace.json": "19b5b14b18afa7cb48c46318dcb2039261567f3e37f7ae5f07e2c7844a770103"
+  },
+  "instructions": {
+    "loaded_by_codex": "agent/AGENTS.md",
+    "developer_instructions_source": "agent/context/task_context.md",
+    "developer_instructions_sha256": "9cc784f1400e670e42ce47171542077001d3e6e6de22643d5c5d295c9b74662e",
+    "initial_prompt": "Task: pick up the blue block\n\nThe episode has not started. Call robot_start.",
+    "initial_prompt_sha256": "77d1abbe7c76cce267d75d7607ba722b3c7ec495d6b516eda7ff0239162359ce"
+  }
+}

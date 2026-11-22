@@ -1,0 +1,2 @@
+{"event": "started", "index": 1, "turn_id": "01a203b5-282d-7d02-a845-fb9153bba1b9", "at": "2026-11-22T14:42:13.790139+00:00", "text": "Task: pick up the blue block\n\nThe episode has not started. Call robot_start."}
+{"event": "completed", "index": 1, "turn_id": "01a203b5-282d-7d02-a845-fb9153bba1b9", "at": "2026-11-22T14:52:21.545786+00:00", "status": "completed", "error": null}

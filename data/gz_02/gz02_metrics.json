@@ -1,0 +1,58 @@
+{
+  "run_id": "gz_02",
+  "task": "pick up the blue block",
+  "model": "gpt-6-astra",
+  "effort": "low",
+  "renderer": "D3D12 (NVIDIA GeForce RTX 5070 Laptop GPU)",
+  "finish_reason": "task_complete",
+  "elapsed_s_result": 610.1,
+  "wall_span_calls_s": 599.06,
+  "sim_span_s": 500.77,
+  "avg_rtf": 0.8359,
+  "total_calls": 38,
+  "actions_executed": 43,
+  "observations": 45,
+  "rejections": {
+    "invalid_plan": 1
+  },
+  "sleep_count": 0,
+  "total_sleep_s": 0.0,
+  "sleep_pct": 0.0,
+  "total_llm_s": 321.69,
+  "llm_pct": 53.7,
+  "llm_mean_s": 8.69,
+  "llm_median_s": 7.38,
+  "total_tool_s": 277.36,
+  "tool_pct": 46.3,
+  "sync_mean_ms": 2.87,
+  "sync_max_ms": 5.0,
+  "tokens": {
+    "total": 2044902,
+    "uncached_input": 75700,
+    "cached_input": 1961088,
+    "cache_write": 0,
+    "output": 8114,
+    "reasoning": 2181
+  },
+  "cache_hit_pct": 96.28,
+  "cost_usd_estimate": 3.124,
+  "tool_counts": {
+    "robot_start": 1,
+    "robot_head": 1,
+    "robot_lift": 1,
+    "robot_base": 1,
+    "robot_execute_plan": 5,
+    "robot_move": 22,
+    "robot_gripper": 6,
+    "task_complete": 1
+  },
+  "status_counts": {
+    "observed": 1,
+    "arrived": 26,
+    "stopped": 5,
+    "rejected": 1,
+    "plan_interrupted": 2,
+    "plan_completed": 2,
+    "completed": 1
+  }
+}

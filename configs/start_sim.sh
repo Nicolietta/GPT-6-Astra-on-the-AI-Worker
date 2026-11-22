@@ -2,6 +2,8 @@
 set -e
 
 WORLD="${1:-table}"
+GUI="${2:-true}"
+RESTART="${3:-false}"
 LOG_DIR="/tmp/ai_worker_logs"
 mkdir -p "$LOG_DIR"
 
@@ -14,6 +16,11 @@ export WAYLAND_DISPLAY=wayland-0
 export XDG_RUNTIME_DIR=/mnt/wslg/runtime-dir
 export QT_X11_NO_MITSHM=1
 
+# Enable WSL2 Mesa D3D12 hardware GPU acceleration on NVIDIA RTX 5070
+export LD_LIBRARY_PATH="/usr/lib/wsl/lib:${LD_LIBRARY_PATH:-}"
+export GALLIUM_DRIVER=d3d12
+export MESA_D3D12_DEFAULT_ADAPTER_NAME=NVIDIA
+
 # Ensure WSLg X11 socket symlink exists
 if [ ! -S /tmp/.X11-unix/X0 ] && [ -d /mnt/wslg/.X11-unix ]; then
     rm -rf /tmp/.X11-unix
@@ -22,6 +29,13 @@ fi
 
 # Clean up any leftover login process
 pkill -f "codex login" 2>/dev/null || true
+
+if [ "$RESTART" = "restart" ] || [ "$RESTART" = "true" ]; then
+    echo "[0/3] Stopping existing ROS 2 / Gazebo / Cyclo / Zenoh processes..."
+    pkill -f "gz sim|ffw_sg2_follower|ai_worker_controller|ai_worker_movel|cyclo_teleoperation|parameter_bridge|dual_laser_merger|robot_state_publisher|rmw_zenohd" 2>/dev/null || true
+    sleep 2
+    rm -f /root/.gz/rendering/ogre2.log 2>/dev/null || true
+fi
 
 # 1. Zenoh
 if ! pgrep -f rmw_zenohd >/dev/null 2>&1; then
@@ -32,29 +46,42 @@ else
     echo "[1/3] Zenoh already running."
 fi
 
-# 2. Gazebo + Cameras
+# 2. Gazebo + Cameras (GPU accelerated)
+WORLD_PATH="$WORLD"
+if [[ "$WORLD" != /* ]]; then
+    WORLD_PATH="/root/ros2_ws/src/ai_worker/ffw_bringup/worlds/${WORLD}"
+fi
+
 if ! pgrep -f "ffw_sg2_follower_ai_gazebo" >/dev/null 2>&1; then
-    echo "[2/3] Starting Gazebo (world=${WORLD}, use_cam=true, rviz=false)..."
+    echo "[2/3] Starting Gazebo (world=${WORLD_PATH}, gui=${GUI}, use_cam=true, rviz=false, GALLIUM_DRIVER=d3d12)..."
     nohup ros2 launch ffw_bringup ffw_sg2_follower_ai_gazebo.launch.py \
-        world:="/root/ros2_ws/src/ai_worker/ffw_bringup/worlds/${WORLD}" \
+        world:="${WORLD_PATH}" \
+        gui:="${GUI}" \
         use_cam:=true \
         rviz:=false > "$LOG_DIR/2_gazebo.log" 2>&1 < /dev/null &
 else
     echo "[2/3] Gazebo already running."
 fi
 
-# Wait up to 25s for Gazebo camera topics and joint_states
-echo "Waiting for Gazebo topics (/joint_states & /head_camera/image)..."
+# Wait up to 30s for Gazebo camera topics and joint_states
+echo "Waiting for Gazebo topics (/joint_states & 3 camera image streams)..."
 READY=0
-for i in $(seq 1 25); do
+for i in $(seq 1 30); do
     TOPICS=$(ros2 topic list 2>/dev/null || true)
-    if echo "$TOPICS" | grep -q "^/joint_states$" && echo "$TOPICS" | grep -q "^/head_camera/image$"; then
+    if echo "$TOPICS" | grep -q "^/joint_states$" && \
+       echo "$TOPICS" | grep -q "^/head_camera/image$" && \
+       echo "$TOPICS" | grep -q "^/wrist_left_camera/image$" && \
+       echo "$TOPICS" | grep -q "^/wrist_right_camera/image$"; then
         READY=1
         echo "Gazebo topics ready after ${i}s!"
         break
     fi
     sleep 1
 done
+
+if [ "$READY" -ne 1 ]; then
+    echo "WARNING: Timed out waiting for Gazebo topics after 30s."
+fi
 
 # 3. Cyclo motion controller
 if ! pgrep -f "ai_worker_controller.launch.py" >/dev/null 2>&1; then
@@ -66,14 +93,8 @@ else
     echo "[3/3] Cyclo already running."
 fi
 
+echo "=== Ogre2 Renderer Check ==="
+grep -E "GL_VENDOR|GL_RENDERER|GL_VERSION|EGL Device" /root/.gz/rendering/ogre2.log 2>/dev/null | tail -n 10 || true
+
 echo "=== Running Processes ==="
-ps -ef | grep -E "rmw_zenohd|gz sim|ai_worker_controller" | grep -v grep | head -n 12
-
-echo "=== Key ROS 2 Topics ==="
-ros2 topic list 2>/dev/null | grep -E "head_camera/image$|wrist_left_camera/image$|wrist_right_camera/image$|joint_states$|goal_move$|cmd_vel$" || true
-
-echo "=== 2_gazebo.log (tail 15) ==="
-tail -n 15 "$LOG_DIR/2_gazebo.log" || true
-
-echo "=== 3_cyclo.log (tail 15) ==="
-tail -n 15 "$LOG_DIR/3_cyclo.log" || true
+ps -eo pid,pcpu,pmem,comm --sort=-pcpu | head -n 10

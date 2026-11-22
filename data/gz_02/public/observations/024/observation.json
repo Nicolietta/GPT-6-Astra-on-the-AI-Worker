@@ -1,0 +1,70 @@
+{
+  "observation_number": 24,
+  "observation_id": "obs_f9861e8ddbb645ce870b159c5a5a3ba2",
+  "stamp_s": 304.425,
+  "frame": "base_link",
+  "arms": {
+    "right": {
+      "xyz": [
+        0.463,
+        -0.2291,
+        0.8068
+      ],
+      "rpy": [
+        0.0343,
+        -0.0022,
+        -0.0012
+      ],
+      "gripper": 0.004,
+      "gripper_rad": 0.004
+    },
+    "left": {
+      "xyz": [
+        -0.0202,
+        0.2523,
+        0.5725
+      ],
+      "rpy": [
+        -0.0277,
+        -0.0018,
+        0.0
+      ],
+      "gripper": 0.005,
+      "gripper_rad": 0.0053
+    }
+  },
+  "body": {
+    "head_joint1": 0.695,
+    "head_joint2": 0.0,
+    "lift_joint": -0.3491
+  },
+  "base": {
+    "frame": "odom",
+    "xy": [
+      0.0,
+      -0.0
+    ],
+    "yaw": -0.0
+  },
+  "images": [
+    {
+      "camera": "head",
+      "path": "/root/ros2_ws/src/ai_worker/ffw_codex/runs/gz_02/public/observations/024/head.jpg",
+      "width": 672,
+      "height": 376
+    },
+    {
+      "camera": "wrist_left",
+      "path": "/root/ros2_ws/src/ai_worker/ffw_codex/runs/gz_02/public/observations/024/wrist_left.jpg",
+      "width": 424,
+      "height": 240
+    },
+    {
+      "camera": "wrist_right",
+      "path": "/root/ros2_ws/src/ai_worker/ffw_codex/runs/gz_02/public/observations/024/wrist_right.jpg",
+      "width": 424,
+      "height": 240
+    }
+  ],
+  "path": "/root/ros2_ws/src/ai_worker/ffw_codex/runs/gz_02/public/observations/024/observation.json"
+}
